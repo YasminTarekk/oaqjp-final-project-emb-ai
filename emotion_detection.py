@@ -17,6 +17,11 @@ def emotion_detector(text_to_analyse):
     result = response.json()
 
     emotions = result["emotionPredictions"][0]["emotion"]
+    anger = emotions["anger"]
+    disgust = emotions["disgust"]
+    fear = emotions["fear"]
+    joy = emotions["joy"]
+    sadness = emotions["sadness"]
 
     dominant_emotion = max(emotions , key = emotions.get)
 
